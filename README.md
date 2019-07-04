@@ -63,4 +63,32 @@
 #### Dynamic CSS
 * `:class` - is a Vue.js method that will combine whatever javascript is in here w/ the class you've already created
 *js fiddle - https://jsfiddle.net/uq5oy9ak/1/
-* js fiddle - https://jsfiddle.net/g1Lysrcp/1/ 
+* js fiddle - https://jsfiddle.net/g1Lysrcp/1/
+
+#### Conditionals
+* `v-if`, `v-else` used for simple conditionals in the html
+* `v-else-if` is usable in 2.1 or above
+* use `<template>` to group DOM elements for non-nested `v-if`'s
+* `v-show` does not remove the element from the DOM like `v-if` does. Gives it a `display: none`
+* jsfiddle - https://jsfiddle.net/u0w7ptd4/1/
+
+#### Lists
+* use a `for in` syntax. Put the property that you want in the `li`
+* for multiple items off an array/object, use parentheses
+    * order matters
+    * the first item will always be the value from the item in the array/object
+    * the second will always be the index
+* use a `template` for using multiple HTML elements in a single loop
+* you can also loop through objects, like using a normal `for in` loop in JS
+    * you can use `()` again to access the `value` and the `key` in the objects
+        * order matters
+        * first is the value
+        * second is the key
+        * third is the index
+* you can loop through numbers
+    * `n in 10` works
+* `push` method
+    * Vue actually proxies the `push` method OG method
+    * to be safe, you need to assign a key w `v-bind` or `:key` to make sure that Vue keeps track of the list item
+        * just like react 
+* js fiddle - https://jsfiddle.net/xy5zg3jk/4/ 
